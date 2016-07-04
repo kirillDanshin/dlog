@@ -1,5 +1,5 @@
 # dlog
-Simple build-time debug log
+Simple build-time controlled debug log
 
 # Release
 To disable logging in release build just run
