@@ -6,7 +6,7 @@ package dlog
 func D(v ...interface{}) {}
 
 // F is a build-time disabled printf
-func F(v ...interface{}) {}
+func F(f string, v ...interface{}) {}
 
 // P is a build-time disabled print
 func P(v ...interface{}) {}
