@@ -31,6 +31,8 @@ func main() {
 	log.P(b) // P'rint `b`
 	log.F("%s format", b) // F'ormatted print
 	log.Ln(b) // print'Ln `b`
+
+	dlog.Ln(log) // or fmt.Println("log") etc.
 }
 ```
 
