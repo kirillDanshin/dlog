@@ -15,3 +15,7 @@ func (b *Buffered) F(f string, v ...interface{}) {}
 func (b *Buffered) D(v ...interface{}) {}
 
 func (b *Buffered) prepare() {}
+
+func (b *Buffered) String() string {
+	return ""
+}

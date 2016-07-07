@@ -43,3 +43,7 @@ func (b *Buffered) prepare() {
 		b = NewBuffered()
 	}
 }
+
+func (b *Buffered) String() string {
+	return string(b.bb.Bytes())
+}
