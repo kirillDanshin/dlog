@@ -13,10 +13,11 @@ import (
 // D dumps a value
 func (*WithCaller) D(v ...interface{}) {
 	c, _ := GetCaller()
-	log.Println(c)
+	log.Print(c, ": [")
 	for _, v := range v {
 		log.Printf("%+#v", v)
 	}
+	log.Println("]")
 }
 
 // F is a build-time enabled printf
@@ -28,15 +29,17 @@ func (*WithCaller) F(f string, v ...interface{}) {
 // P is a build-time enabled print
 func (*WithCaller) P(v ...interface{}) {
 	c, _ := GetCaller()
-	log.Println(c)
+	log.Print(c, ": [")
 	log.Print(v...)
+	log.Println("]")
 }
 
 // Ln is a build-time enabled println
 func (*WithCaller) Ln(v ...interface{}) {
 	c, _ := GetCaller()
-	log.Println(c)
+	log.Print(c, ": [")
 	log.Println(v...)
+	log.Println("]")
 }
 
 // GetCaller returns caller's file, line and func name
