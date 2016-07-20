@@ -1,4 +1,4 @@
-# dlog
+# dlog [![GoDoc](https://godoc.org/github.com/kirillDanshin/dlog?status.svg)](https://godoc.org/github.com/kirillDanshin/dlog) [![Go Report Card](https://goreportcard.com/badge/github.com/kirillDanshin/dlog)](https://goreportcard.com/report/github.com/kirillDanshin/dlog)
 Simple build-time controlled debug log
 
 # How to use
