@@ -15,7 +15,7 @@ func (*WithCaller) D(v ...interface{}) {
 	c, _ := GetCaller()
 	log.Print(c, ": [")
 	for _, v := range v {
-		log.Printf("\t%+#v", v)
+		spewInstance.Dump(v)
 	}
 	log.Println("]")
 }
@@ -23,7 +23,8 @@ func (*WithCaller) D(v ...interface{}) {
 // F is a build-time enabled printf
 func (*WithCaller) F(f string, v ...interface{}) {
 	c, _ := GetCaller()
-	log.Printf(myutils.Concat(c.String(), "[\n\t", f, "\n]"), v...)
+	// log.Printf(myutils.Concat(c.String(), "[\n\t", f, "\n]"), v...)
+	spewInstance.Printf(myutils.Concat(c.String(), "[\n\t", f, "\n]"), v...)
 }
 
 // P is a build-time enabled print
