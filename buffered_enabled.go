@@ -24,7 +24,7 @@ func (b *Buffered) P(v ...interface{}) {
 func (b *Buffered) F(f string, v ...interface{}) {
 	b.prepare()
 	b.Lock()
-	fmt.Fprintf(b.bb, f, v...)
+	fmt.Fprintf(b.bb, f+"\n", v...)
 	b.Unlock()
 }
 
@@ -33,7 +33,7 @@ func (b *Buffered) D(v ...interface{}) {
 	b.prepare()
 	b.Lock()
 	for _, v := range v {
-		fmt.Fprintf(b.bb, "%+#v", v)
+		fmt.Fprintf(b.bb, "%+#v\n", v)
 	}
 	b.Unlock()
 }

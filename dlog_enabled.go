@@ -3,6 +3,7 @@
 package dlog
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/davecgh/go-spew/spew"
@@ -22,12 +23,13 @@ func D(v ...interface{}) {
 // F is a build-time enabled printf
 func F(f string, v ...interface{}) {
 	// log.Printf(f, v...)
-	spewInstance.Printf(f, v...)
+	spewInstance.Printf(f+"\n", v...)
 }
 
 // P is a build-time enabled print
 func P(v ...interface{}) {
 	log.Print(v...)
+	fmt.Println()
 }
 
 // Ln is a build-time enabled println
